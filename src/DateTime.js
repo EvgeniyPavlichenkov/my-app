@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from "react";
-import DateTime from "./components/DateTime";
+import DateTimeString from "./components/DateTimeString";
 
 
 // Написать компонент, в котором есть кнопка и div с числом. Число лежит в перменной, переменная - это стей
 // При клике на кнопку вызывается функция, которая меняет перменную в стейте и возникает автоматический ререндер
 // Значение переменной увеличивается на 1 с каждым кликом
-const Countdown = () => {
+const DateTime = () => {
     const [dateString, setDateString] = useState('');
 
     useEffect(() => {
@@ -17,16 +17,16 @@ const Countdown = () => {
 
     return (
         <div>
-            <DateTime dateString={dateString} />
-            <DateTime dateString={dateString} />
-            <DateTime dateString={dateString} />
-            <DateTime dateString={dateString} />
-            <DateTime dateString={dateString} />
-            <DateTime dateString={dateString} />
-            <DateTime dateString={dateString} />
-            <DateTime dateString={dateString} />
+            <DateTimeString dateString={dateString} />
+            <DateTimeString dateString={dateString} />
+            <DateTimeString dateString={dateString} />
+            <DateTimeString dateString={dateString} />
+            <DateTimeString dateString={dateString} />
+            <DateTimeString dateString={dateString} />
+            <DateTimeString dateString={dateString} />
+            <DateTimeString dateString={dateString} />
         </div>
     );
 }
 
-export default Countdown;
+export default DateTime;
