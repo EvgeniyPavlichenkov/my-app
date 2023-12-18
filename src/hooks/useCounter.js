@@ -1,4 +1,3 @@
-import {useEffect, useState} from "react";
 import {CounterActions} from "../dataActions/Counter";
 import {useMutation, useQuery, useQueryClient} from "react-query";
 

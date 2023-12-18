@@ -1,7 +1,11 @@
 export const CounterActions = {
     saveValue: (value) => {
         return new Promise((resolve, reject) => {
-            localStorage.setItem('value', value);
+            let valueToSave = value;
+            if (!value) {
+                valueToSave = 0;
+            }
+            localStorage.setItem('value', valueToSave);
             resolve();
         })
     },
