@@ -1,18 +1,23 @@
-import {Counter} from "./components/Counter/Counter";
-import {Input} from './components/Input'
-import {Alert} from './components/Alert/Alert'
 import {QueryClient, QueryClientProvider} from "react-query";
+import {AddNewPhone} from "./components/AddNewPhone/AddNewPhone";
+import styled from "styled-components";
+import {PhonesList} from "./components/PhonesList";
 
 const queryClient = new QueryClient()
+
+const Wrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+`;
 
 function App() {
   return (
       <QueryClientProvider client={queryClient}>
-            <div>
-                <Counter />
-                <Input />
-                <Alert />
-            </div>
+          <Wrapper>
+              <AddNewPhone />
+              <PhonesList />
+          </Wrapper>
       </QueryClientProvider>
   );
 }
